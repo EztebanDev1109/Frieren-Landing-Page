@@ -1,0 +1,797 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    --c-0: hsla(263.22580645161287, 88%, 93%, 1);
+    --y-0: -7%;
+    --x-0: 33%;
+    --y-1: 1%;
+    --c-1: hsla(197.58620689655172, 87%, 87%, 1);
+    --x-1: 85%;
+    --y-2: 5%;
+    --x-2: 14%;
+    --c-2: hsla(0, 6%, 97%, 1);
+    --y-3: 96%;
+    --x-3: 7%;
+    --c-3: hsla(0, 6%, 97%, 1);
+    --c-4: hsla(0, 6%, 97%, 1);
+    --y-4: 90%;
+    --x-4: 93%;
+    --x-5: 65%;
+    --y-5: 99%;
+    --c-5: hsla(264.44444444444446, 87%, 93%, 1);
+    --y-6: 98%;
+    --c-6: hsla(197.58620689655172, 87%, 87%, 1);
+    --x-6: 95%;
+    --y-7: 63%;
+    --c-7: hsla(217.6884422110553, 0%, 100%, 1);
+    --x-7: 48%;
+    ;
+    background-color: hsla(0, 6%, 97%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4)), radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5), transparent var(--s-end-5)), radial-gradient(circle at var(--x-6) var(--y-6), var(--c-6) var(--s-start-6), transparent var(--s-end-6)), radial-gradient(circle at var(--x-7) var(--y-7), var(--c-7) var(--s-start-7), transparent var(--s-end-7));
+    animation: hero-gradient-animation 10s linear infinite alternate;
+    background-blend-mode: normal, normal, normal, normal, normal, normal, normal, normal;
+}
+
+
+header {
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: 100;
+}
+
+
+header .logo {
+    width: 120px;   /* cámbialo según tu logo */
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+header nav {
+    background: rgba(162, 175, 231, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 50px; 
+    padding: 0 20px; /* para que los links tengan espacio lateral */
+    display: flex;
+    align-items: center; /* CENTRA todo lo que hay dentro */
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    height: 100%;
+    align-items: center; /* centra los links verticalmente */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fcfcfc;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+
+header nav ul li a:hover {
+    color: #a5c3f0;
+}
+
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px 80px;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+    color: rgb(0, 0, 0);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text p {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    margin: 30px 0;
+    padding: 10px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}   
+
+.btn {
+    background: rgba(6, 129, 230, 0.904);
+    padding: 12px 30px;
+    border-radius: 8px;
+    display: FEL;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #857cff;
+}
+
+.hero-img img {
+    width: 380px;
+    
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0);}
+    50% { transform: translateY(-12px);}
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 80px 80px;
+}
+
+
+.about h2 {
+    text-align: center;
+    padding: 0px 0px 3%;
+    font-size: 50PX;
+}
+
+
+.about p {
+    margin: px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* CARRUSEL */
+.gallery {
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.gallery {
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.carousel {
+    width: 90%;
+    max-width: 900px;
+    height: 350px;
+    overflow: hidden;
+    margin: 30px auto 0;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    width: 400%;
+    height: 100%;              /* ✔ IMPORTANTE */
+    animation: slide 20s infinite;
+}
+
+.carousel-inner img {
+    margin: 0px 0px 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;         /* ✔ Para que se adapte sin deformarse */
+    object-position: center;   /* Puedes cambiar a 'top' si quieres */
+    border-radius: 12px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    12.5% { transform: translateX(-20%); }
+    25% { transform: translateX(-40%); }
+    37.5% { transform: translateX(-60%); }
+    50% { transform: translateX(-80%); }
+    62.5% { transform: translateX(-60%); }
+    75% { transform: translateX(-40%); }
+    87.5% { transform: translateX(-20%); }
+    100% { transform: translateX(0%); }
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    opacity: 0.8;
+}
+
+
+
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header nav ul {
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .hero-img img {
+        width: 300px;
+    }
+
+    .about {
+        padding: 60px 30px;
+    }
+
+    .about h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header nav {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-img img {
+        width: 260px;
+    }
+
+    .carousel {
+        height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav {
+        position: relative;
+        transform: none;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul {
+        gap: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .hero-img img {
+        width: 220px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .carousel {
+        height: 220px;
+    }
+
+    .carousel-inner img {
+        margin: 10px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-img img {
+        width: 180px;
+    }
+
+    .carousel {
+        height: 180px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes hero-gradient-animation {
+    0% {
+        --c-0: hsla(263.22580645161287, 88%, 93%, 1);
+        --s-start-0: 8.392121895570533%;
+        --s-end-0: 22.10878124098502%;
+        --y-0: -7%;
+        --x-0: 33%;
+        --y-1: 1%;
+        --c-1: hsla(197.58620689655172, 87%, 87%, 1);
+        --s-start-1: 8.392121895570533%;
+        --s-end-1: 22.558651527792346%;
+        --x-1: 85%;
+        --s-start-2: 8.392121895570533%;
+        --s-end-2: 22.558651527792346%;
+        --y-2: 5%;
+        --x-2: 14%;
+        --c-2: hsla(0, 6%, 97%, 1);
+        --y-3: 96%;
+        --s-start-3: 8.392121895570533%;
+        --s-end-3: 22.558651527792346%;
+        --x-3: 7%;
+        --c-3: hsla(0, 6%, 97%, 1);
+        --c-4: hsla(0, 6%, 97%, 1);
+        --y-4: 90%;
+        --s-start-4: 8.392121895570533%;
+        --s-end-4: 22.558651527792346%;
+        --x-4: 93%;
+        --s-start-5: 8.392121895570533%;
+        --s-end-5: 39.67138181429644%;
+        --x-5: 65%;
+        --y-5: 99%;
+        --c-5: hsla(264.44444444444446, 87%, 93%, 1);
+        --y-6: 98%;
+        --c-6: hsla(197.58620689655172, 87%, 87%, 1);
+        --x-6: 95%;
+        --s-start-6: 8.392121895570533%;
+        --s-end-6: 49.58090142552271%;
+        --y-7: 63%;
+        --c-7: hsla(217.6884422110553, 0%, 100%, 1);
+        --x-7: 48%;
+        --s-start-7: 8.392121895570533%;
+        --s-end-7: 34.815367581495366%;
+    }
+
+    100% {
+        --c-0: hsla(263.22580645161287, 88%, 93%, 1);
+        --s-start-0: 12;
+        --s-end-0: 87;
+        --y-0: 98%;
+        --x-0: 25%;
+        --y-1: 98%;
+        --c-1: hsla(197.58620689655172, 87%, 87%, 1);
+        --s-start-1: 12;
+        --s-end-1: 87;
+        --x-1: 7%;
+        --s-start-2: 12;
+        --s-end-2: 87;
+        --y-2: 94%;
+        --x-2: 95%;
+        --c-2: hsla(0, 6%, 97%, 1);
+        --y-3: 36%;
+        --s-start-3: 12;
+        --s-end-3: 87;
+        --x-3: 3%;
+        --c-3: hsla(0, 6%, 97%, 1);
+        --c-4: hsla(0, 6%, 97%, 1);
+        --y-4: 84%;
+        --s-start-4: 12;
+        --s-end-4: 87;
+        --x-4: 83%;
+        --s-start-5: 12;
+        --s-end-5: 87;
+        --x-5: 84%;
+        --y-5: 35%;
+        --c-5: hsla(264.44444444444446, 87%, 93%, 1);
+        --y-6: 1%;
+        --c-6: hsla(197.58620689655172, 87%, 87%, 1);
+        --x-6: 23%;
+        --s-start-6: 12;
+        --s-end-6: 87;
+        --y-7: 82%;
+        --c-7: hsla(217.6884422110553, 0%, 100%, 1);
+        --x-7: 95%;
+        --s-start-7: 12;
+        --s-end-7: 87;
+    }
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(263.22580645161287, 88%, 93%, 1)
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22.10878124098502%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: -7%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 33%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 1%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(197.58620689655172, 87%, 87%, 1)
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22.558651527792346%
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 85%
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22.558651527792346%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 5%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 14%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(0, 6%, 97%, 1)
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 96%
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22.558651527792346%
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 7%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(0, 6%, 97%, 1)
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(0, 6%, 97%, 1)
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 90%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22.558651527792346%
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 93%
+}
+
+@property --s-start-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 39.67138181429644%
+}
+
+@property --x-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 65%
+}
+
+@property --y-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 99%
+}
+
+@property --c-5 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(264.44444444444446, 87%, 93%, 1)
+}
+
+@property --y-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 98%
+}
+
+@property --c-6 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(197.58620689655172, 87%, 87%, 1)
+}
+
+@property --x-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 95%
+}
+
+@property --s-start-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 49.58090142552271%
+}
+
+@property --y-7 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 63%
+}
+
+@property --c-7 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(217.6884422110553, 0%, 100%, 1)
+}
+
+@property --x-7 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 48%
+}
+
+@property --s-start-7 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.392121895570533%
+}
+
+@property --s-end-7 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 34.815367581495366%
+}
